@@ -11,6 +11,10 @@ class App extends Component {
     ],
   };
 
+  switchNameHandler = () => {
+    console.log("clicked");
+  }
+
   render() {
     return (
       //parenthesis needed here to mark jsx code
@@ -19,7 +23,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
-        <button>Switch Name</button>
+        <button onClick={ this.switchNameHandler }>Switch Name</button>
         <Person
           name={ this.state.persons[0].name }
           age={ this.state.persons[0].age }
