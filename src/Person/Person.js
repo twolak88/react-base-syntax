@@ -5,6 +5,7 @@ const person = (props) => {
         He is { props.name } and he is { props.age }!
       </p>
       <p>{ props.children }</p>
+      <input type="text" onChange={ props.changed } value={ props.name } />
     </div>
   );
 };

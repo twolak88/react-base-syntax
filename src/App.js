@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-import "./App.css";
-import Person from "./Person/Person";
+import React, { Component } from 'react';
+import './App.css';
+import Person from './Person/Person';
 
 class App extends Component {
   state = {
     persons: [
-      { name: "Max", age: 28 },
-      { name: "Mat", age: 23 },
-      { name: "Tom", age: 31 },
+      { name: 'Max', age: 28 },
+      { name: 'Mat', age: 23 },
+      { name: 'Tom', age: 31 },
     ]
   };
 
@@ -16,8 +16,18 @@ class App extends Component {
     this.setState({
       persons: [
         { name: newName, age: 28 },
-        { name: "Mat2", age: 12 },
-        { name: "Tom", age: 31 },
+        { name: 'Mat2', age: 12 },
+        { name: 'Tom', age: 31 },
+      ]
+    });
+  }
+
+  nameChangedHandler = (event) => {
+    this.setState({
+      persons: [
+        { name: 'Max', age: 28 },
+        { name: event.target.value, age: 12 },
+        { name: 'Tom', age: 31 },
       ]
     });
   }
@@ -39,6 +49,7 @@ class App extends Component {
           name={ this.state.persons[1].name }
           age={ this.state.persons[1].age }
           click={ this.switchNameHandler.bind(this, 'Max3') /*recommended*/ }
+          changed={ this.nameChangedHandler }
         >
           His hobbies: racing
         </Person>
