@@ -1,4 +1,6 @@
-const person = () => 
-    <p>He is a person and he is {Math.floor(Math.random() * 30)}!</p>;
+const person = (props) => {
+    return <p>He is {props.name} and he is {props.age}!</p>
+}
+    
 
 export default person;
