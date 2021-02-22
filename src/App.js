@@ -33,6 +33,14 @@ class App extends Component {
   }
 
   render() {
+    const buttonStyle = {
+      backgroundColor: 'white',
+      font: 'inherit',
+      border: '1px solid blue',
+      padding: '8px',
+      cursor: 'pointer'
+    };
+    
     return (
       //parenthesis needed here to mark jsx code
       //jsx code not html
@@ -40,7 +48,9 @@ class App extends Component {
       <div className="App">
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
-        <button onClick={ () => this.switchNameHandler('Max2') /*anonymous function inefficient, not recommended*/ }>Switch Name</button>
+        <button
+          style={ buttonStyle }
+          onClick={ () => this.switchNameHandler('Max2') /*anonymous function inefficient, not recommended*/ }>Switch Name</button>
         <Person
           name={ this.state.persons[0].name }
           age={ this.state.persons[0].age }
