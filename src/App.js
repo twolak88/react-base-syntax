@@ -11,11 +11,11 @@ class App extends Component {
     ]
   };
 
-  switchNameHandler = () => {
+  switchNameHandler = (newName) => {
     // DONT USE THAT: this.state.persons[0].name = "Max2";
     this.setState({
       persons: [
-        { name: "Max2", age: 28 },
+        { name: newName, age: 28 },
         { name: "Mat2", age: 12 },
         { name: "Tom", age: 31 },
       ]
@@ -30,7 +30,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
-        <button onClick={ this.switchNameHandler }>Switch Name</button>
+        <button onClick={ () => this.switchNameHandler('Max2') /*anonymous function inefficient, not recommended*/ }>Switch Name</button>
         <Person
           name={ this.state.persons[0].name }
           age={ this.state.persons[0].age }
@@ -38,6 +38,7 @@ class App extends Component {
         <Person
           name={ this.state.persons[1].name }
           age={ this.state.persons[1].age }
+          click={ this.switchNameHandler.bind(this, 'Max3') /*recommended*/ }
         >
           His hobbies: racing
         </Person>
