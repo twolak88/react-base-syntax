@@ -11,7 +11,7 @@ class App extends Component {
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
         <Person name="Max" age="32"/>
-        <Person name="Mat" age="23">My hobbies: racing</Person>
+        <Person name="Mat" age="23">His hobbies: racing</Person>
         <Person name="Tom" age="33"/>
       </div>
       
