@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import  Person from './Person/Person'
 
 class App extends Component {
   render() {
@@ -9,7 +10,7 @@ class App extends Component {
       <div className="App">
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
-        <p>A paragraph</p>
+        <Person />
       </div>
       
     );
