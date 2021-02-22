@@ -1,6 +1,8 @@
+import './Person.css';
+
 const person = (props) => {
   return (
-    <div>
+    <div className="Person">
       <p onClick={ props.click }>
         He is { props.name } and he is { props.age }!
       </p>
