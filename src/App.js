@@ -3,6 +3,14 @@ import "./App.css";
 import Person from "./Person/Person";
 
 class App extends Component {
+  state = {
+    persons: [
+      { name: "Max", age: 28 },
+      { name: "Mat", age: 23 },
+      { name: "Tom", age: 31 },
+    ],
+  };
+
   render() {
     return (
       //parenthesis needed here to mark jsx code
@@ -11,11 +19,21 @@ class App extends Component {
       <div className="App">
         <h1>Hi, this is my first react app!!</h1>
         <h1>another heading can be add only insight App</h1>
-        <Person name="Max" age="32" />
-        <Person name="Mat" age="23">
+        <button>Switch Name</button>
+        <Person
+          name={ this.state.persons[0].name }
+          age={ this.state.persons[0].age }
+        />
+        <Person
+          name={ this.state.persons[1].name }
+          age={ this.state.persons[1].age }
+        >
           His hobbies: racing
         </Person>
-        <Person name="Tom" age="33" />
+        <Person
+          name={ this.state.persons[2].name }
+          age={ this.state.persons[2].age }
+        />
       </div>
     );
     // return React.createElement('div', {className: 'App'},
